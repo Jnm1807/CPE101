@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Kuntaporn</title>
+    <style>
+        /* Global styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1.5em 0; /* เพิ่มพื้นที่ padding */
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            position: fixed; /* ทำให้เมนูอยู่ติดที่ */
+            top: 0; /* ติดที่ด้านบน */
+            left: 0; /* เริ่มต้นจากซ้าย */
+            right: 0; /* ขยายไปจนถึงขวา */
+            background-color: #444;
+            padding: 0.5em 2em;
+            z-index: 1000; /* ให้อยู่ด้านหน้า */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #f0a500;
+        }
+        section {
+            padding: 5em 2em 2em; /* เพิ่มพื้นที่ด้านบนให้กับส่วนต่าง ๆ */
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #f0a500;
+            padding-bottom: 0.5em;
+            font-size: 2em; /* เพิ่มขนาดตัวอักษร */
+            margin-bottom: 1em;
+            text-align: center; /* จัดกึ่งกลาง */
+        }
+        .about-content, .education-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2em; /* เพิ่มระยะห่างด้านล่าง */
+        }
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-left: 1em;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .fun-facts {
+            margin-top: 1em;
+            padding: 1em;
+            background-color: #e6e6e6;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .education-image {
+            width: 170px; /* ลดความกว้างลง */
+            height: 700px; /* ยังคงความยาวที่ 700px */
+            margin-right: 1em;
+            flex-shrink: 0;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .education-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .education-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 700px; /* ปรับความสูงให้เข้ากับรูปภาพ */
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5em;
+            margin-top: 1em;
+        }
+        .skill-card {
+            background-color: #fff;
+            border: 2px solid #f0a500;
+            border-radius: 10px;
+            padding: 1.5em;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(240, 165, 0, 0.3);
+        }
+        .skill-card h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 0.5em;
+            text-transform: uppercase;
+        }
+        .skill-card p {
+            font-size: 0.9em;
+            color: #666;
+            margin: 0.5em 0 0;
+        }
+        .contact {
+            text-align: center; /* จัดกึ่งกลาง */
+            margin-top: 2em;
+        }
+        .contact a {
+            color: #f0a500;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center; /* จัดกึ่งกลาง */
+            padding: 1em 0;
+            background-color: #333;
+            color: #fff;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Kuntaporn's Portfolio</h1>
+        <p>KMUTT</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" class="about">
+        <h2>About</h2>
+        <div class="about-content">
+            <div>
+                <p>ชื่อจริง: นางสาวกันตพร กุลทวีสมบัติ เป็นนักพัฒนาเว็บที่ชื่นชอบเทคโนโลยีและการเขียนโค้ด</p>
+                <p>ชื่อเล่น: จูน</p>
+                <p>วันเกิด: 18/07/2005</p>
+                <p>กรุ๊ปเลือด: A</p>
+                <p>งานอดิเรก: อ่านนิยาย, นอน</p>
+                
+                <div class="fun-facts">
+                    <h3>เกร็ดน่ารู้</h3>
+                    <ul>
+                        <li>ชอบการเรียนรู้เกี่ยวกับเทคโนโลยีใหม่ ๆ</li>
+                        <li>มีความสนใจในการพัฒนาแอปพลิเคชันที่ใช้ Machine Learning</li>
+                        <li>เป็นคนรักสัตว์มากกกกกกกกก</li>
+                    </ul>
+                </div>
+            </div>
+            <img src="รร.2.jpg" alt="Profile Picture" class="profile-image">
+        </div>
+    </section>
+
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <div class="education-content">
+            <div class="education-image">
+                <img src="รร.1.jpg" alt="Education Image">
+            </div>
+            <div class="education-text">
+                <p style="margin-top: 0;">ระดับอนุบาลศึกษา-ระดับประถมศึกษาปีที่ 6 โรงเรียนวัดบางปะกอก</p>
+                <p style="margin: auto 0;">ระดับมัธยมศึกษาตอนต้นและมัธยมศึกษาตอนปลาย โรงเรียนวัดพุทธบูชา</p>
+                <p style="margin-bottom: 0;">ระดับอุดมศึกษาปัจจุบัน มหาวิทยาลัยพระจอมเกล้าธนบุรี</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Arduino</h3>
+                <p>พื้นฐานการใช้ Arduino</p>
+            </div>
+            <div class="skill-card">
+                <h3>ESP8266</h3>
+                <p>พื้นฐานการใช้ ESP8266</p>
+            </div>
+            <div class="skill-card">
+                <h3>ESP32</h3>
+                <p>พื้นฐานการใช้ ESP32</p>
+            </div>
+            <div class="skill-card">
+                <h3>การออกแบบ</h3>
+                <p>ออกแบบ 2D 3D เบื้องต้น</p>
+            </div>
+            <div class="skill-card">
+                <h3>การใช้เลเซอร์คัท</h3>
+                <p>การใช้เลเซอร์คัทเบื้องต้น</p>
+            </div>
+            <div class="skill-card">
+                <h3>3D Printer</h3>
+                <p>การใช้ 3D Printer เบื้องต้น</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Email: kuntaporn.kult@mail.kmutt.ac.th</p>
+        <p>Phone: 085-587-7867</p>
+        <p>ID: june180748</p>
+        <p>FB: <a href="https://www.facebook.com/kanthaporn.kulthaweesombat?locale=th_TH" target="_blank">kuntaporn kulthaweesombat</a></p>
+    </section>
+
+    <footer>
+        <p>© 2024 Kuntaporn. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
